@@ -30,7 +30,7 @@ class NewsArticle {
             strcpy(title, "untitled");
         }
         
-        NewsArticle (const Category category, char *title = "untitled")
+        NewsArticle (const Category &category, char *title = "untitled")
         {
             this->category = category;
             strcpy(this->title,title);
@@ -56,7 +56,7 @@ class FrontPage {
             editionNumber = 0;
         }
         
-        FrontPage (const NewsArticle article, float price = 0, int editionNumber = 0)
+        FrontPage (const NewsArticle &article, float price = 0, int editionNumber = 0)
         {
             this->article = article;
             this->price = price;
